@@ -61,7 +61,7 @@ def decrypt_text():
     try:
         decrypted = cipher.decrypt(encrypted)
         print("\nDecrypted text:\n", decrypted.decode())
-    except():
+    except:
         print("❌ Incorrect password or corrupted data")
 
 
