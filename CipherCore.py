@@ -64,9 +64,9 @@ def decrypt_text():
     except:
         print("❌ Incorrect password or corrupted data")
 
-# -------------------------------
+
 # Encrypt file
-# -------------------------------
+
 def encrypt_file():
     password = getpass("Enter password: ")
     filename = input("Enter file path: ")
