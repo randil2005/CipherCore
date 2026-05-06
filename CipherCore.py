@@ -146,7 +146,7 @@ def main():
             print("Goodbye 👋")
             sys.exit()
         else:
-            print("❌ Invalid option")
+            print(" Invalid option")
 
 if __name__ == "__main__":
     banner()
