@@ -16,10 +16,6 @@
 </p>
 
 ---
-CipherCore
-
-A lightweight terminal-based encryption toolkit for securing text and files using strong, password-based cryptographic techniques.
-
 # 📖 Overview
 
 CipherCore is a secure command-line encryption toolkit designed for encrypting and decrypting text and files using modern cryptography standards.
