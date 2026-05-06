@@ -44,9 +44,9 @@ def encrypt_text():
     result = base64.urlsafe_b64encode(salt + encrypted).decode()
     print("\nEncrypted text:\n", result)
 
-# -------------------------------
+
 # Decrypt text
-# -------------------------------
+
 def decrypt_text():
     password = getpass("Enter password: ")
     encrypted_input = input("Enter encrypted text: ")
