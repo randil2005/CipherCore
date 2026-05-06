@@ -42,14 +42,14 @@ def encrypt_text():
     encrypted = cipher.encrypt(text)
 
     result = base64.urlsafe_b64encode(salt + encrypted).decode()
-    print("\nEncrypted text:\n", result)
+    print ("\nEncrypted text:\n", result)
 
 
 # Decrypt text
 
 def decrypt_text():
     password = getpass("Enter password: ")
-    encrypted_input = input("Enter encrypted text: ")
+    encrypted_input = input("Enter encrypted text here: ")
 
     data = base64.urlsafe_b64decode(encrypted_input.encode())
     salt = data[:16]
@@ -120,9 +120,9 @@ def decrypt_file():
     except:
         print("❌ Incorrect password or corrupted file")
 
-# -------------------------------
+
 # CLI Menu
-# -------------------------------
+
 def main():
     while True:
         print("\n==== Encryption Tool ====")
