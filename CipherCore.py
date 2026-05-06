@@ -29,7 +29,6 @@ def generate_key(password: str, salt: bytes) -> bytes:
         backend=default_backend()
     )
     return base64.urlsafe_b64encode(kdf.derive(password.encode()))
-print("none")
 
 
 def encrypt_text():
@@ -62,7 +61,7 @@ def decrypt_text():
     try:
         decrypted = cipher.decrypt(encrypted)
         print("\nDecrypted text:\n", decrypted.decode())
-    except:
+    except():
         print("❌ Incorrect password or corrupted data")
 
 
