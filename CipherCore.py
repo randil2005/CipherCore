@@ -44,9 +44,9 @@ def encrypt_text():
     result = base64.urlsafe_b64encode(salt + encrypted).decode()
     print("\nEncrypted text:\n", result)
 
-
+# -------------------------------
 # Decrypt text
-
+# -------------------------------
 def decrypt_text():
     password = getpass("Enter password: ")
     encrypted_input = input("Enter encrypted text: ")
@@ -64,9 +64,9 @@ def decrypt_text():
     except:
         print("❌ Incorrect password or corrupted data")
 
-
+# -------------------------------
 # Encrypt file
-
+# -------------------------------
 def encrypt_file():
     password = getpass("Enter password: ")
     filename = input("Enter file path: ")
@@ -89,8 +89,9 @@ def encrypt_file():
 
     print(f"✅ Encrypted file saved as {filename}.enc")
 
-
+# -------------------------------
 # Decrypt file
+# -------------------------------
 def decrypt_file():
     password = getpass("Enter password: ")
     filename = input("Enter encrypted file path: ")
