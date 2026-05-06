@@ -16,6 +16,9 @@
 </p>
 
 ---
+CipherCore
+
+A lightweight terminal-based encryption toolkit for securing text and files using strong, password-based cryptographic techniques.
 
 # 📖 Overview
 
