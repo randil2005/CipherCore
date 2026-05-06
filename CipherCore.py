@@ -89,9 +89,9 @@ def encrypt_file():
 
     print(f"✅ Encrypted file saved as {filename}.enc")
 
-# -------------------------------
+
 # Decrypt file
-# -------------------------------
+
 def decrypt_file():
     password = getpass("Enter password: ")
     filename = input("Enter encrypted file path: ")
