@@ -121,7 +121,7 @@ pip install -r requirements.txt
 # ▶️ Running CipherCore
 
 ```bash
-python CipherCore.py
+python CipherCore. py
 ```
 
 ---
