@@ -7,9 +7,18 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.fernet import Fernet
 from cryptography.hazmat.backends import default_backend
 
-# -------------------------------
-# Key generation from password
-# -------------------------------
+def banner():
+    print("\033[33m")
+    print(r"""
+  //   ██████╗██╗██████╗ ██╗  ██╗███████╗██████╗  ██████╗ ██████╗ ██████╗ ███████╗
+//    ██╔════╝██║██╔══██╗██║  ██║██╔════╝██╔══██╗██╔════╝██╔═══██╗██╔══██╗██╔════╝
+//    ██║     ██║██████╔╝███████║█████╗  ██████╔╝██║     ██║   ██║██████╔╝█████╗
+//    ██║     ██║██╔═══╝ ██╔══██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗██╔══╝
+//    ╚██████╗██║██║     ██║  ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║███████╗
+//     ╚═════╝╚═╝╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+//
+        ─────── OSINT TOOLKIT ───────""")
+
 def generate_key(password: str, salt: bytes) -> bytes:
     kdf = PBKDF2HMAC(
         algorithm=hashes.SHA256(),
@@ -20,9 +29,7 @@ def generate_key(password: str, salt: bytes) -> bytes:
     )
     return base64.urlsafe_b64encode(kdf.derive(password.encode()))
 
-# -------------------------------
-# Encrypt text
-# -------------------------------
+
 def encrypt_text():
     password = getpass("Enter password: ")
     text = input("Enter text to encrypt: ").encode()
@@ -141,4 +148,5 @@ def main():
             print("❌ Invalid option")
 
 if __name__ == "__main__":
+    banner()
     main()
