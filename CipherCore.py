@@ -30,6 +30,8 @@ def generate_key(password: str, salt: bytes) -> bytes:
     )
     return base64.urlsafe_b64encode(kdf.derive(password.encode()))
 
+print()
+
 
 def encrypt_text():
     password = getpass("Enter password: ")
